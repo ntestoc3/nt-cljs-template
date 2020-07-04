@@ -1,10 +1,9 @@
 # nt-cljs
-
-A Leiningen template for FIXME.
+A Lein Template for shadow-cljs project.
 
 ## Usage
 
-FIXME
+lein new nt-cljs my-cljs-app
 
 ## License
 

@@ -1,0 +1,27 @@
+{:source-paths ["src"]
+ :dependencies [
+                [binaryage/devtools "1.0.2"]
+                [reagent "0.10.0"]
+                [reagent-utils "0.3.3"]
+                [cljs-ajax "0.8.0"]
+                [binaryage/oops "0.7.0"]
+                [metosin/reitit "0.5.1"]
+                [venantius/accountant "0.2.5"
+                 :exclusions [org.clojure/tools.reader]]
+                [pez/clerk "1.0.0"]
+                ]
+
+ :dev-http {8000 "public"}
+
+ :nrepl {:port 8777}
+
+ :builds
+ {
+  ;; https://shadow-cljs.github.io/docs/UsersGuide.html#target-browser
+  :app {:target :browser
+        :output-to "public/js/app.js"
+        :asset-path "/js"
+        :modules {:app {:init-fn {{project-ns}}.core/init}}
+        :devtools {:preloads [shadow.remote.runtime.cljs.browser]}
+        :build-hooks [(hooks.sass/watch)]
+        }}}

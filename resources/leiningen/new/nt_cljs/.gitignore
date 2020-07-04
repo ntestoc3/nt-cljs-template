@@ -1,0 +1,7 @@
+build/
+node_modules/
+target/
+public/js/
+.shadow-cljs/
+.nrepl-port
+*.lock
